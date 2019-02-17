@@ -22,11 +22,11 @@ public class tutor_login extends AppCompatActivity {
 
     public void go_to_classes(View view){
         Intent intent = new Intent(this, ClassesList.class);
-        EditText tutor_name = (EditText) findViewById(R.id.editText2);
+        EditText tutor_name = (EditText) findViewById(R.id.editText7);
         String message = tutor_name.getText().toString();
         intent.putExtra(TUTOR_NAME,message);
-        EditText classes = (EditText) findViewById(R.id.editText2);
-        String message2 = tutor_name.getText().toString();
+        EditText classes = (EditText) findViewById(R.id.editText8);
+        String message2 = classes.getText().toString();
         intent.putExtra(TUTOR_CLASS,message2);
         startActivity(intent);
     }
