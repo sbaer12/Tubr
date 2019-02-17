@@ -2,35 +2,61 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/msg1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:showIn="@layout/app_bar_main" >
 
-    <ImageButton
-        android:id="@+id/Search_button"
+    <EditText
+        android:id="@+id/promt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="312dp"
-        android:layout_marginLeft="312dp"
-        android:layout_marginTop="612dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="305dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="304dp"
+        android:ems="10"
+        android:inputType="textMultiLine|textPersonName"
+        android:text="Please Search For a Tutor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/btn_plus" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/msg1"
+    <ImageButton
+        android:id="@+id/Search_Button"
+        android:layout_width="123dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="187dp"
+        android:background="@drawable/common_full_open_on_phone"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/promt1"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <ImageButton
+        android:id="@+id/Settings_Button"
+        style="@android:style/Widget.DeviceDefault.ImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Please Search for a tutor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginEnd="347dp"
+        android:layout_marginRight="347dp"
+        android:layout_marginBottom="241dp"
+        android:background="@drawable/common_full_open_on_phone"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/promt1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_radio" />
 
 </android.support.constraint.ConstraintLayout>
