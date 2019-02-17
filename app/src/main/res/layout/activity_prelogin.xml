@@ -16,6 +16,7 @@
         android:layout_marginEnd="162dp"
         android:layout_marginRight="162dp"
         android:text="Student"
+        android:onClick="goToStudent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,6 +30,7 @@
         android:layout_marginEnd="162dp"
         android:layout_marginRight="162dp"
         android:layout_marginBottom="267dp"
+        android:onClick="goToTutor"
         android:text="Tutor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,6 +1,7 @@
 package com.example.tubr;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -33,6 +35,11 @@ import static com.google.android.gms.location.LocationServices.getFusedLocationP
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    public final String S_NAME = "";
+    public final String S_CLASS = "";
+    public final String TUTOR_NAME = "";
+    public final String TUTOR_CLASS = "";
+
     private FusedLocationProviderClient mFusedLocationClient;
     private User user;
 
@@ -42,7 +49,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_prelogin);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        /*
         //create the location object to then pull for location
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
@@ -62,7 +69,42 @@ public class MainActivity extends AppCompatActivity
                     }
                 });
 
+                */
+
     }
+    public void goToStudent(View view) {
+        Intent intent = new Intent(this, student_login.class);
+        startActivity(intent);
+
+    }
+    public void student_classes (View view){
+        Intent intent = new Intent(this, ClassesList.class);
+        EditText tutor_name = (EditText) findViewById(R.id.editText4);
+        String message = tutor_name.getText().toString();
+        intent.putExtra(S_NAME, message);
+        EditText classes = (EditText) findViewById(R.id.editText5);
+        String message2 = classes.getText().toString();
+        intent.putExtra(S_CLASS, message2);
+        startActivity(intent);
+    }
+
+    public void go_to_classes(View view){
+        Intent intent = new Intent(this, ClassesList.class);
+        EditText tutor_name = (EditText) findViewById(R.id.editText7);
+        String message = tutor_name.getText().toString();
+        intent.putExtra(TUTOR_NAME,message);
+        EditText classes = (EditText) findViewById(R.id.editText8);
+        String message2 = classes.getText().toString();
+        intent.putExtra(TUTOR_CLASS,message2);
+        startActivity(intent);
+    }
+    public void goToTutor(View view) {
+        Intent intent = new Intent(this , tutor_login.class);
+        startActivity(intent);
+
+    }
+
+
 
     @Override
     public void onBackPressed() {
