@@ -89,6 +89,13 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void go_to_classes(View view){
+
+        try {
+            Functionality.sendCreateUserToHTTP("Spencer", "abc@123.com", "123-456-7890", "CMSC131", "1,3");
+
+        } catch (Exception e) { System.out.println("failed http"); }
+
+        /*
         Intent intent = new Intent(this, ClassesList.class);
         EditText tutor_name = (EditText) findViewById(R.id.editText7);
         String message = tutor_name.getText().toString();
@@ -97,6 +104,7 @@ public class MainActivity extends AppCompatActivity
         String message2 = classes.getText().toString();
         intent.putExtra(TUTOR_CLASS,message2);
         startActivity(intent);
+        */
     }
     public void goToTutor(View view) {
         Intent intent = new Intent(this , tutor_login.class);

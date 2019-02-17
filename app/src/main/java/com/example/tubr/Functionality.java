@@ -33,14 +33,7 @@ public class Functionality {
     public static void sendCreateUserToHTTP(String name, String email, String phone,
                                       String classes, String location) throws Exception {
 
-        SSLContextBuilder builder = new SSLContextBuilder();
-        builder.loadTrustMaterial(null, new TrustSelfSignedStrategy());
-        SSLConnectionSocketFactory sslsf = new SSLConnectionSocketFactory(
-                builder.build());
-        CloseableHttpClient httpclient = HttpClients.custom().setSSLSocketFactory(
-                sslsf).build();
-        //HttpClient httpclient = HttpClients.createDefault();
-        // HttpClient httpclient = HttpClientBuilder.create().build();
+        HttpClient httpclient = HttpClientBuilder.create().build();
         HttpPost httppost = new HttpPost("http://13.82.25.117:8080/TubrServer/MainServlet");
 
         // Request parameters and other properties.
