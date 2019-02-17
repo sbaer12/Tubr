@@ -62,14 +62,6 @@ public class MainActivity extends AppCompatActivity
                     }
                 });
 
-        ImageButton searchButton = (ImageButton) findViewById(R.id.Search_Button);
-        searchButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
