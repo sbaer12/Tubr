@@ -14,6 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".prelogin"></activity>
+        <activity android:name=".ClassesList"></activity>
+        <activity android:name=".tutor_login" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -26,4 +28,9 @@
         </activity>
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
 </manifest>
+
