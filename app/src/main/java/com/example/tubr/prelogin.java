@@ -16,19 +16,27 @@ public class prelogin extends AppCompatActivity {
         Button studentB = findViewById(R.id.student_button);
         studentB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(this, student_login.class);
-                startActivity(intent);
-                finish();
+                goToStudent();
             }
         });
 
         Button tutorB = findViewById(R.id.tutor_button);
         tutorB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(this, tutor_login.class);
-                startActivity(intent);
-                finish();
+                goToTutor();
             }
         });
+    }
+
+    public void goToTutor() {
+        Intent intent = new Intent(this , tutor_login.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void goToStudent() {
+        Intent intent = new Intent(this, student_login.class);
+        startActivity(intent);
+        finish();
     }
 }
